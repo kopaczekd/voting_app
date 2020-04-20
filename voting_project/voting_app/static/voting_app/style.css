@@ -1,0 +1,144 @@
+body {
+    text-align: center;
+    align: center;
+    margin: 0;
+    padding: 0;
+    background: #031321;
+    font-family: consolas;
+}
+
+h1 {
+    text-shadow: 0 0 10px 10px black;
+    padding: 10px;
+    font-size: 70px;
+    color: yellow;
+    margin-bottom: 50px;
+    box-shadow: 0 0 5px 5px yellow;
+}
+
+h4 a {
+    align: center;
+    color: yellow;
+    padding: 15px 30px;
+    letter-spacing: 3px;
+    text-decoration: none;
+    font-size: 20px;
+    overflow: hidden;
+    transition: 0.2s;
+}
+
+h4 a:hover {
+    position: relative;
+    display: inline;
+    color:#255784;
+    padding: 15px 30px;
+    background: yellow;
+    box-shadow: 0 0 10px yellow, 0 0 30px yellow, 0 0 70px yellow;
+    border-radius: 5px;
+}
+
+
+#choices {
+    color: yellow;
+    letter-spacing: 3px;
+    text-decoration: none;
+    font-size: 20px;
+    transition: 0.2s;
+}
+
+
+#choices table {
+    margin-left:auto;
+    margin-right:auto;
+    text-align: center;
+}
+
+
+form label {
+    color: yellow;
+    border-radius: 5px;
+    transition: 0.2s;
+}
+
+form label:hover {
+    color:#255784;
+    background: yellow;
+    box-shadow: 0 0 4px yellow, 0 0 10px yellow, 0 0 20px yellow;
+    border-radius: 5px;
+    transition: 0.2s;
+}
+
+
+.option-input {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  -o-appearance: none;
+  appearance: none;
+  position: relative;
+  border: 0.5px solid yellow;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 40px;
+  width: 40px;
+  transition: all 0.15s ease-out 0s;
+  background: #031321;
+  color: #031321;
+  cursor: pointer;
+  display: inline-block;
+  margin-right: 2rem;
+  outline: none;
+  position: relative;
+  z-index: 1000;
+}
+.option-input:checked {
+  background: yellow;
+}
+.option-input:checked::before {
+  height: 40px;
+  width: 40px;
+  position: absolute;
+  content: '>';
+  display: inline-block;
+  font-size: 26.66667px;
+  text-align: center;
+  line-height: 40px;
+}
+
+
+#submit {
+    font-family: consolas;
+    font-size: 20px;
+    margin-top: 60px;
+    width: 200px;
+    color: yellow;
+    padding: 15px 30px;
+    background: #031321;
+    border-radius: 5px;
+    border-color: yellow;
+    transition: 0.2s;
+}
+
+#submit:hover {
+    width: 180px;
+    color: #031321;
+    background: yellow;
+    border-radius: 5px;
+    border-color: #031321;
+    transition: 0.2s;
+}
+
+
+#error {
+    color: red;
+}
+
+
+#another_voting {
+   margin-top: 30px;
+}
+
+#another_voting a{
+   color: red;
+}

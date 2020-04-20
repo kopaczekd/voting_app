@@ -1,0 +1,12 @@
+{% extends "admin/base.html" %}
+
+<!--{{ title }} | {{ site_title|default:_('Django site admin') }}-->
+{% block title %}
+Voting App Administration
+{% endblock %}
+
+{% block branding %}
+<h1 id="site-name"><a href="{% url 'admin:index' %}">Voting App Administration</a></h1>
+{% endblock %}
+
+{% block nav-global %}{% endblock %}

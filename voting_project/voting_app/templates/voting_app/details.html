@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>Details</title>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'voting_app/style.css' %}">
+</head>
+<body>
+
+{% if error_message %}
+
+<p id="error">{{ error_message }}</p>
+
+{% endif %}
+
+{% if question %}
+
+<h1>{{ question.question_text }}</h1>
+
+    <form action="{% url 'voting_app:vote'  question.id %}" method="POST" id="choices">
+        {% csrf_token %}
+
+            <table>
+                {% for choice in question.choice_set.all %}
+                <tr>
+                    <td><input type="radio" name="choice" id="choice{{ choice.id }}" value="{{ choice.id }}" class="option-input"></td>
+                    <td><label for="choice{{ choice.id }}">{{ choice.choice_text }}</label></td>
+                </tr>
+                {% endfor %}
+            </table>
+        <input type="submit" value="Vote" id="submit">
+    </form>
+
+{% else %}
+
+<h4>There is no question!</h4>
+
+{% endif %}
+
+</body>
+</html>
